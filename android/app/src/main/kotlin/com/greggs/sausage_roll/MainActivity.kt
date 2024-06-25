@@ -1,6 +1,5 @@
-package com.greggs.sausage_roll
+package com.benbaggley.greggs
 
 import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity: FlutterActivity() {
-}
+class MainActivity : FlutterActivity() {}

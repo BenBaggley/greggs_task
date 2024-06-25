@@ -14,7 +14,7 @@ import 'package:greggs/l10n/l10n.dart';
 /// {@endtemplate}
 class ProductsPageWidget extends StatefulWidget {
   /// {@macro products_page}
-  const ProductsPageWidget({Key? key}) : super(key: key);
+  const ProductsPageWidget({super.key});
 
   @override
   State<ProductsPageWidget> createState() => _ProductsPageWidgetState();
@@ -33,11 +33,11 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
             builder: (context, value, _) {
               return Container(
                 padding: const EdgeInsets.only(),
-                width: 32 * MediaQuery.of(context).textScaleFactor,
+                width: MediaQuery.of(context).textScaler.scale(32),
                 alignment: Alignment.centerRight,
                 child: Text(
                   value > 99 ? '99+' : value.toString(),
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                 ),
@@ -69,7 +69,7 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
               initial: () => const SizedBox(),
               loading: () => buildLoading(context),
               data: (products) => buildProducts(context, products),
-              orElse: () => throw FallThroughError(),
+              orElse: () => throw UnimplementedError(),
             );
           },
         ),

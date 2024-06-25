@@ -3,9 +3,9 @@ import 'package:mocktail/mocktail.dart';
 
 class MockDio extends Mock implements Dio {}
 
-DioError dioError() {
-  return DioError(
-    type: DioErrorType.response,
+DioException dioError() {
+  return DioException(
+    type: DioExceptionType.badResponse,
     response: Response<Map<String, dynamic>>(
       data: <String, dynamic>{
         'message': 'message',

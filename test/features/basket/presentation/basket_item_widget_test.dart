@@ -41,7 +41,7 @@ void main() {
         await tester.pumpApp(
           child: BasketItemWidget(
             item: item,
-            onRemoveFromBasket: onRemove,
+            onRemoveFromBasket: onRemove.call,
           ),
         );
 

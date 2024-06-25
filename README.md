@@ -1,6 +1,10 @@
+This is a simple project created as a technical test for a previous job.
+The task was to display details of a product, with the ability to add it to a basket.
+Since there was no API provided, this was mocked in the implementation.
+
 ## Prerequisites ✅
 
-This project requires Flutter 3.0.5 or higher, and Dart 2.17.1 or higher.
+This project requires Flutter 3.22.0 or higher, and Dart 3.4.0 or higher.
 
 ---
 

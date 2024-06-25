@@ -104,7 +104,7 @@ void main() {
       when(() => basketStorage.itemCount).thenReturn(ValueNotifier(10));
 
       final router = MockRouter();
-      when(() => router.push(any())).thenReturn(null);
+      when(() => router.push(any())).thenReturn(Future.value(null));
 
       await tester.pumpRouterApp(
         child: const ProductsPageWidget(),

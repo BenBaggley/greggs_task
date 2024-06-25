@@ -8,8 +8,8 @@ class MockRouterProvider extends StatelessWidget {
   const MockRouterProvider({
     required this.goRouter,
     required this.child,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   /// The mock router used to mock navigation calls.
   final MockRouter goRouter;

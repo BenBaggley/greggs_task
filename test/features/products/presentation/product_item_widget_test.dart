@@ -50,7 +50,7 @@ void main() {
         await tester.pumpApp(
           child: ProductItemWidget(
             product: product,
-            onAddToBasket: onAdd,
+            onAddToBasket: onAdd.call,
           ),
         );
 

@@ -9,10 +9,10 @@ import 'package:intl/intl.dart';
 class BasketItemWidget extends StatefulWidget {
   /// {@macro product_item}
   const BasketItemWidget({
-    Key? key,
+    super.key,
     required this.item,
     required this.onRemoveFromBasket,
-  }) : super(key: key);
+  });
 
   /// The item to display
   final BasketItem item;
@@ -47,12 +47,12 @@ class _BasketItemWidgetState extends State<BasketItemWidget> {
                 Expanded(
                   child: Text(
                     item.product.articleName,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ),
                 Text(
                   '${item.quantity} x ${NumberFormat.currency(symbol: '£').format(item.product.eatOutPrice)}',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
             ),

@@ -9,10 +9,10 @@ import 'package:intl/intl.dart';
 class ProductItemWidget extends StatefulWidget {
   /// {@macro product_item}
   const ProductItemWidget({
-    Key? key,
+    super.key,
     required this.product,
     required this.onAddToBasket,
-  }) : super(key: key);
+  });
 
   /// The product to display
   final Product product;
@@ -47,13 +47,13 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                 Expanded(
                   child: Text(
                     product.articleName,
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                 ),
                 Text(
                   NumberFormat.currency(symbol: '£')
                       .format(product.eatOutPrice),
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
             ),
@@ -65,7 +65,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                 children: [
                   Text(
                     product.customerDescription,
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   const SizedBox(height: 16),
                   ElevatedButton(

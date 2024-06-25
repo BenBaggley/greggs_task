@@ -6,7 +6,7 @@ import 'package:greggs/features/basket/domain/repositories/basket_repository.dar
 import 'package:greggs/features/products/domain/entities/product.dart';
 import 'package:injectable/injectable.dart';
 
-/// {@default_template basket_repository}
+/// {@template basket_repository}
 /// Implementation of the [BasketRepository] using [BasketDataSource]
 /// {@endtemplate}
 @Injectable(as: BasketRepository)

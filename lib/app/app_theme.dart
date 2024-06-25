@@ -7,7 +7,6 @@ ThemeData buildTheme(ThemeData base) {
     colorScheme: base.colorScheme.copyWith(
       primary: primaryColor(base.brightness),
       secondary: secondaryColor,
-      background: surfaceColor(base.brightness),
       surface: surfaceColor(base.brightness),
       onSurface: textAccentColor(base.brightness),
       onPrimary: textAccentColor(base.brightness),
@@ -27,8 +26,8 @@ ThemeData buildTheme(ThemeData base) {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: textAccentColor(base.brightness),
-        onPrimary: primaryColor(base.brightness),
+        backgroundColor: textAccentColor(base.brightness),
+        foregroundColor: primaryColor(base.brightness),
         textStyle: GoogleFonts.barlow(
           fontSize: 16,
           fontWeight: FontWeight.w700,

@@ -16,7 +16,7 @@ part 'app_theme.dart';
 part 'colors.dart';
 
 class GreggsChallenge extends StatefulWidget {
-  const GreggsChallenge({Key? key}) : super(key: key);
+  const GreggsChallenge({super.key});
 
   static Future<void> run() async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -59,4 +59,4 @@ class _GreggsChallengeState extends State<GreggsChallenge> {
 }
 
 @injectableInit
-Future<void> _initializeDependencies() => $initGetIt(GetIt.I);
+Future<void> _initializeDependencies() => GetIt.I.init();

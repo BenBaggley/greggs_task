@@ -12,7 +12,7 @@ import 'package:intl/intl.dart';
 /// {@endtemplate}
 class BasketPageWidget extends StatefulWidget {
   /// {@macro basket_page}
-  const BasketPageWidget({Key? key}) : super(key: key);
+  const BasketPageWidget({super.key});
 
   @override
   State<BasketPageWidget> createState() => _BasketPageWidgetState();
@@ -60,7 +60,7 @@ class _BasketPageWidgetState extends State<BasketPageWidget> {
             initial: () => const SizedBox(),
             loading: () => buildLoading(context),
             data: (items, total) => buildBasket(context, items, total),
-            orElse: () => throw FallThroughError(),
+            orElse: () => throw UnimplementedError(),
           );
         },
       ),
@@ -113,6 +113,11 @@ class _BasketPageWidgetState extends State<BasketPageWidget> {
         Card(
           margin: EdgeInsets.zero,
           color: Theme.of(context).colorScheme.onSurface,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(12),
+            ),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
